@@ -12,6 +12,7 @@ You will have three tasks:
 SSH Barrage - Task 1
 Task: Generate a high amount of failed SSH login attempts and verify that Kibana is picking up this activity.
 One way we can generate logs of interest is to create some failed SSH logins on our servers.
+
 ●	The only environment that holds our SSH keys is our Ansible container. Attempting to create an SSH connection from any other environment will trigger a log entry.
 
 ●	We can also create a log entry by attempting to log in with the wrong username.
@@ -30,6 +31,7 @@ We can easily do this by trying to SSH to a web machine from our jump box direct
 Linux Stress - Task 2
 Task: Generate a high amount of CPU usage on the pentesting machines and verify that Kibana picks up this data.
 The Metrics page for a single VM shows the CPU usage for that machine. This shows how much work the machine is doing. Excessively high CPU usage is typically a cause for concern, as overworked computers are at greater risk for failure.
+
 ●	Metricbeat forwards data about CPU load to Elasticsearch, which can be visualized with Kibana.
 
 ●	In this activity, you will intentionally stress the CPU of one of your VMs, then find evidence of the increased activity in Kibana.
